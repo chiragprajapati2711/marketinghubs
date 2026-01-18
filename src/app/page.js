@@ -116,7 +116,7 @@ export default function Home() {
               <span className="block bg-gradient-to-r from-onyx-600 via-onyx-500 to-ash-grey-600 bg-clip-text text-transparent animate-pulse">
                 Digital Marketing Excellence
               </span>
-            </h1>
+          </h1>
             <p className={`text-xl md:text-2xl mb-10 leading-relaxed transition-colors duration-300 ${
               darkMode ? 'text-dim-grey-300' : 'text-dim-grey-600'
             }`}>

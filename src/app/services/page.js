@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import FAQ from '@/components/FAQ';
@@ -34,6 +35,7 @@ export default function ServicesPage() {
       id: 'seo',
       title: 'SEO Optimization',
       icon: '🔍',
+      image: '/SEO-marketing-company.webp',
       gradient: 'from-onyx-500 to-onyx-400',
       description: 'Boost your search engine rankings and drive organic traffic to your website.',
       features: [
@@ -56,6 +58,7 @@ export default function ServicesPage() {
       id: 'ppc',
       title: 'PPC Advertising',
       icon: '📊',
+      image: '/PPC infographic.webp',
       gradient: 'from-ash-grey-500 to-ash-grey-400',
       description: 'Maximize ROI with targeted pay-per-click campaigns across Google and Bing.',
       features: [
@@ -78,6 +81,7 @@ export default function ServicesPage() {
       id: 'meta-ads',
       title: 'Meta Ads',
       icon: '📱',
+      image: '/AD_4nXcuYZ9QrGo7Pg02YkCvGUMzOIVa.webp',
       gradient: 'from-onyx-600 to-onyx-700',
       description: 'Reach your audience on Facebook and Instagram with data-driven ad campaigns.',
       features: [
@@ -100,6 +104,7 @@ export default function ServicesPage() {
       id: 'social-media',
       title: 'Social Media Marketing',
       icon: '💬',
+      image: '/social-media-marketing-e14304079.webp',
       gradient: 'from-ash-grey-500 to-onyx-500',
       description: 'Build your brand presence and engage with your audience across all platforms.',
       features: [
@@ -122,6 +127,7 @@ export default function ServicesPage() {
       id: 'ecommerce',
       title: 'Ecommerce Marketing',
       icon: '🛒',
+      image: '/eCommerce-Development-and-Digita.webp',
       gradient: 'from-ash-grey-500 to-ash-grey-600',
       description: 'Drive sales and increase revenue with specialized ecommerce marketing strategies.',
       features: [
@@ -255,12 +261,22 @@ export default function ServicesPage() {
                 }`}>
                   <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-20`}></div>
                   <div className="relative h-full flex items-center justify-center p-8">
-                    <div className="text-center">
-                      <div className="text-8xl mb-4">{service.icon}</div>
-                      <div className={`text-2xl font-bold transition-colors duration-300 ${
-                        darkMode ? 'text-white' : 'text-dim-grey-900'
-                      }`}>
-                        {service.title}
+                    <div className="relative w-full h-full">
+                      <Image
+                        src={service.image}
+                        alt={service.title}
+                        fill
+                        className="object-cover rounded-2xl opacity-90"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent rounded-2xl"></div>
+                      <div className="absolute bottom-8 left-8 right-8 text-center">
+                        <div className="text-4xl mb-2">{service.icon}</div>
+                        <div className={`text-2xl font-bold transition-colors duration-300 ${
+                          darkMode ? 'text-white' : 'text-white'
+                        }`}>
+                          {service.title}
+                        </div>
                       </div>
                     </div>
                   </div>
