@@ -10,21 +10,21 @@ export default function Footer() {
     <footer className={`${darkMode ? 'bg-dim-grey-900 text-dim-grey-300' : 'bg-dim-grey-900 text-dim-grey-300'} py-12 px-4 sm:px-6 lg:px-8`}>
       <div className="max-w-7xl mx-auto">
         {/* Big Brand Logo Section */}
-        <div className="flex flex-col md:flex-row items-center justify-center mb-12 pb-8 border-b border-dim-grey-800">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 mb-12 pb-8 border-b border-dim-grey-800 text-center">
           <svg 
             width="80" 
             height="80" 
             viewBox="0 0 100 100" 
             fill="none" 
             xmlns="http://www.w3.org/2000/svg"
-            className="w-[10vw] h-[10vw] max-w-[100px] max-h-[100px] text-white mb-4"
+            className="w-[10vw] h-[10vw] max-w-[100px] max-h-[100px] text-white"
           >
             <path
               d="M50 0C50 27.6142 27.6142 50 0 50C27.6142 50 50 72.3858 50 100C50 72.3858 72.3858 50 100 50C72.3858 50 50 27.6142 50 0Z"
               fill="currentColor" 
             />
           </svg>
-          <div className="text-3xl md:text-9xl font-bold text-white">Marketing Hubs</div>
+          <div className="text-3xl md:text-9xl font-bold text-white text-center">Marketing Hubs</div>
         </div>
 
         <div className="grid md:grid-cols-4 gap-8 mb-8">
