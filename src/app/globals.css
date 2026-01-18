@@ -1,0 +1,206 @@
+@import "tailwindcss";
+
+/* Zalando Sans Expanded Font */
+@font-face {
+  font-family: 'Zalando Sans Expanded';
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/fontsource/fonts/zalando-sans-expanded:vf@latest/latin-wght-normal.woff2')
+      format('woff2-variations');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+                 U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+                 U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --font-zalando: 'Zalando Sans Expanded', system-ui, -apple-system, sans-serif;
+
+  /* Onyx Colors (Green) */
+  --color-onyx-50: #f0f5f0;
+  --color-onyx-100: #e0ebe0;
+  --color-onyx-200: #c2d6c2;
+  --color-onyx-300: #a3c2a3;
+  --color-onyx-400: #85ad85;
+  --color-onyx-500: #669966;
+  --color-onyx-600: #527a52;
+  --color-onyx-700: #3d5c3d;
+  --color-onyx-800: #293d29;
+  --color-onyx-900: #141f14;
+  --color-onyx-950: #0e150e;
+
+  /* Brick Ember Colors (Red) */
+  --color-brick-ember-50: #ffe6e8;
+  --color-brick-ember-100: #ffccd1;
+  --color-brick-ember-200: #fe9aa4;
+  --color-brick-ember-300: #fe6776;
+  --color-brick-ember-400: #fe3448;
+  --color-brick-ember-500: #fe011b;
+  --color-brick-ember-600: #cb0115;
+  --color-brick-ember-700: #980110;
+  --color-brick-ember-800: #65010b;
+  --color-brick-ember-900: #330005;
+  --color-brick-ember-950: #240004;
+
+  /* Dim Grey Colors */
+  --color-dim-grey-50: #f2f2f3;
+  --color-dim-grey-100: #e4e6e7;
+  --color-dim-grey-200: #cacdce;
+  --color-dim-grey-300: #afb3b6;
+  --color-dim-grey-400: #959a9d;
+  --color-dim-grey-500: #7a8185;
+  --color-dim-grey-600: #62676a;
+  --color-dim-grey-700: #494d50;
+  --color-dim-grey-800: #313435;
+  --color-dim-grey-900: #181a1b;
+  --color-dim-grey-950: #111213;
+
+  /* Ash Grey Colors */
+  --color-ash-grey-50: #f0f4f4;
+  --color-ash-grey-100: #e2e9e9;
+  --color-ash-grey-200: #c4d4d3;
+  --color-ash-grey-300: #a7bebc;
+  --color-ash-grey-400: #8aa8a6;
+  --color-ash-grey-500: #6c9390;
+  --color-ash-grey-600: #577573;
+  --color-ash-grey-700: #415856;
+  --color-ash-grey-800: #2b3b3a;
+  --color-ash-grey-900: #161d1d;
+  --color-ash-grey-950: #0f1514;
+
+  /* Ghost White Colors (Purple) */
+  --color-ghost-white-50: #f0eff5;
+  --color-ghost-white-100: #e1dfec;
+  --color-ghost-white-200: #c3bfd9;
+  --color-ghost-white-300: #a49fc6;
+  --color-ghost-white-400: #8680b3;
+  --color-ghost-white-500: #68609f;
+  --color-ghost-white-600: #534d80;
+  --color-ghost-white-700: #3e3960;
+  --color-ghost-white-800: #2a2640;
+  --color-ghost-white-900: #151320;
+  --color-ghost-white-950: #0f0d16;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-zalando);
+  --font-mono: var(--font-geist-mono);
+
+  /* Onyx */
+  --color-onyx-50: var(--color-onyx-50);
+  --color-onyx-100: var(--color-onyx-100);
+  --color-onyx-200: var(--color-onyx-200);
+  --color-onyx-300: var(--color-onyx-300);
+  --color-onyx-400: var(--color-onyx-400);
+  --color-onyx-500: var(--color-onyx-500);
+  --color-onyx-600: var(--color-onyx-600);
+  --color-onyx-700: var(--color-onyx-700);
+  --color-onyx-800: var(--color-onyx-800);
+  --color-onyx-900: var(--color-onyx-900);
+  --color-onyx-950: var(--color-onyx-950);
+
+  /* Brick Ember */
+  --color-brick-ember-50: var(--color-brick-ember-50);
+  --color-brick-ember-100: var(--color-brick-ember-100);
+  --color-brick-ember-200: var(--color-brick-ember-200);
+  --color-brick-ember-300: var(--color-brick-ember-300);
+  --color-brick-ember-400: var(--color-brick-ember-400);
+  --color-brick-ember-500: var(--color-brick-ember-500);
+  --color-brick-ember-600: var(--color-brick-ember-600);
+  --color-brick-ember-700: var(--color-brick-ember-700);
+  --color-brick-ember-800: var(--color-brick-ember-800);
+  --color-brick-ember-900: var(--color-brick-ember-900);
+  --color-brick-ember-950: var(--color-brick-ember-950);
+
+  /* Dim Grey */
+  --color-dim-grey-50: var(--color-dim-grey-50);
+  --color-dim-grey-100: var(--color-dim-grey-100);
+  --color-dim-grey-200: var(--color-dim-grey-200);
+  --color-dim-grey-300: var(--color-dim-grey-300);
+  --color-dim-grey-400: var(--color-dim-grey-400);
+  --color-dim-grey-500: var(--color-dim-grey-500);
+  --color-dim-grey-600: var(--color-dim-grey-600);
+  --color-dim-grey-700: var(--color-dim-grey-700);
+  --color-dim-grey-800: var(--color-dim-grey-800);
+  --color-dim-grey-900: var(--color-dim-grey-900);
+  --color-dim-grey-950: var(--color-dim-grey-950);
+
+  /* Ash Grey */
+  --color-ash-grey-50: var(--color-ash-grey-50);
+  --color-ash-grey-100: var(--color-ash-grey-100);
+  --color-ash-grey-200: var(--color-ash-grey-200);
+  --color-ash-grey-300: var(--color-ash-grey-300);
+  --color-ash-grey-400: var(--color-ash-grey-400);
+  --color-ash-grey-500: var(--color-ash-grey-500);
+  --color-ash-grey-600: var(--color-ash-grey-600);
+  --color-ash-grey-700: var(--color-ash-grey-700);
+  --color-ash-grey-800: var(--color-ash-grey-800);
+  --color-ash-grey-900: var(--color-ash-grey-900);
+  --color-ash-grey-950: var(--color-ash-grey-950);
+
+  /* Ghost White */
+  --color-ghost-white-50: var(--color-ghost-white-50);
+  --color-ghost-white-100: var(--color-ghost-white-100);
+  --color-ghost-white-200: var(--color-ghost-white-200);
+  --color-ghost-white-300: var(--color-ghost-white-300);
+  --color-ghost-white-400: var(--color-ghost-white-400);
+  --color-ghost-white-500: var(--color-ghost-white-500);
+  --color-ghost-white-600: var(--color-ghost-white-600);
+  --color-ghost-white-700: var(--color-ghost-white-700);
+  --color-ghost-white-800: var(--color-ghost-white-800);
+  --color-ghost-white-900: var(--color-ghost-white-900);
+  --color-ghost-white-950: var(--color-ghost-white-950);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-zalando);
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Smooth animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Dark mode transitions */
+.dark {
+  color-scheme: dark;
+}
