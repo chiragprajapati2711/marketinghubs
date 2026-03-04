@@ -15,7 +15,11 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Marketing Hubs - Digital Marketing Services | SEO, PPC, Social Media",
-  description: "Professional digital marketing services including SEO, PPC, Meta Ads, Social Media Marketing, and Ecommerce Marketing. Grow your business with data-driven strategies.",
+  description:
+    "Professional digital marketing services including SEO, PPC, Meta Ads, Social Media Marketing, and Ecommerce Marketing. Grow your business with data-driven strategies.",
+  verification: {
+    google: "WFnQipVxuz76mJ_4gObaypCQBYM0AW3mHhXZFU9P-fo",
+  },
 };
 
 export default function RootLayout({ children }) {
