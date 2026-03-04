@@ -20,7 +20,9 @@ export default function Navigation() {
   }, []);
 
   const navLinks = [
+    { href: '/digital-marketing', label: 'Digital Marketing' },
     { href: '/services', label: 'Services' },
+    { href: '/ecommerce', label: 'Ecommerce' },
     { href: '/pricing', label: 'Pricing' },
     { href: '/about', label: 'About' },
     { href: '/contact', label: 'Contact' },
