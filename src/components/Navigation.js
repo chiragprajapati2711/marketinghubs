@@ -21,6 +21,7 @@ export default function Navigation() {
 
   const navLinks = [
     { href: '/digital-marketing', label: 'Digital Marketing' },
+    { href: '/website-development', label: 'Website Development' },
     { href: '/services', label: 'Services' },
     { href: '/ecommerce', label: 'Ecommerce' },
     { href: '/pricing', label: 'Pricing' },
