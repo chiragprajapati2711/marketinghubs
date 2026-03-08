@@ -17,6 +17,37 @@ export const metadata = {
   title: "Marketing Hubs - Digital Marketing Services | SEO, PPC, Social Media",
   description:
     "Professional digital marketing services including SEO, PPC, Meta Ads, Social Media Marketing, and Ecommerce Marketing. Grow your business with data-driven strategies.",
+  metadataBase: new URL(
+    (process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000").replace(/\/$/, "")
+  ),
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: "Marketing Hubs - Digital Marketing & Website Development",
+    description:
+      "Grow your business with SEO, PPC, social media, email marketing, website development, and ecommerce marketing.",
+    url: "/",
+    siteName: "Marketing Hubs",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/eCommerce-Development-and-Digita.webp",
+        width: 1200,
+        height: 630,
+        alt: "Marketing Hubs",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Marketing Hubs - Digital Marketing & Website Development",
+    description:
+      "Grow your business with SEO, PPC, social media, email marketing, website development, and ecommerce marketing.",
+    images: ["/eCommerce-Development-and-Digita.webp"],
+  },
   verification: {
     google: "WFnQipVxuz76mJ_4gObaypCQBYM0AW3mHhXZFU9P-fo",
   },
