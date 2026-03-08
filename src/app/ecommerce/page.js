@@ -85,19 +85,21 @@ export default function EcommercePage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section id="hero" className="relative pt-24 min-h-[70vh] flex items-center overflow-hidden">
+      <section id="hero" className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image
-            src="/eCommerce-Development-and-Digita.webp"
-            alt="Ecommerce digital marketing"
-            fill
-            className="object-cover"
-            priority
-            sizes="100vw"
-          />
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+            aria-hidden
+          >
+            <source src="/BG3.mp4" type="video/mp4" />
+          </video>
           <div className="absolute inset-0 bg-gradient-to-r from-dim-grey-900/90 via-dim-grey-900/70 to-dim-grey-900/50" />
         </div>
-        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-white">
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-white">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             Ecommerce marketing that <span className="text-onyx-400">drives sales</span>
           </h1>
