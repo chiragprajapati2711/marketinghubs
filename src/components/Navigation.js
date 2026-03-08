@@ -19,14 +19,43 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Used for mobile menu
   const navLinks = [
     { href: '/digital-marketing', label: 'Digital Marketing' },
     { href: '/website-development', label: 'Website Development' },
-    { href: '/services', label: 'Services' },
     { href: '/ecommerce', label: 'Ecommerce' },
+    { href: '/services', label: 'All Services' },
     { href: '/pricing', label: 'Pricing' },
     { href: '/about', label: 'About' },
     { href: '/contact', label: 'Contact' },
+  ];
+
+  // Services mega menu (desktop)
+  const servicesMenu = [
+    {
+      href: '/digital-marketing',
+      label: 'Digital Marketing',
+      description: 'Social media, campaigns, email, PPC, and SEO in one strategy.',
+      emoji: '📈',
+    },
+    {
+      href: '/website-development',
+      label: 'Website Development',
+      description: 'Corporate, WordPress, and e-commerce sites that convert.',
+      emoji: '💻',
+    },
+    {
+      href: '/ecommerce',
+      label: 'Ecommerce Marketing',
+      description: 'Scale your online store with performance-focused campaigns.',
+      emoji: '🛒',
+    },
+    {
+      href: '/services',
+      label: 'View all services',
+      description: 'See everything we can do for your brand.',
+      emoji: '✨',
+    },
   ];
 
   return (
@@ -48,24 +77,138 @@ export default function Navigation() {
           </Link>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`transition-colors ${
-                  pathname === link.href
-                    ? darkMode
-                      ? 'text-onyx-400 font-semibold'
-                      : 'text-onyx-600 font-semibold'
-                    : darkMode
-                      ? 'text-dim-grey-300 hover:text-onyx-400'
-                      : 'text-dim-grey-700 hover:text-onyx-600'
+          <div className="hidden md:flex items-center gap-6">
+            {/* Services dropdown (mega menu) */}
+            <div
+              className="relative group"
+            >
+              <button
+                className={`flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+                  darkMode
+                    ? 'bg-dim-grey-800/80 text-dim-grey-100 hover:bg-dim-grey-700'
+                    : 'bg-dim-grey-50 text-dim-grey-800 hover:bg-dim-grey-100'
                 }`}
               >
-                {link.label}
-              </Link>
-            ))}
+                <span>Services</span>
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+
+              <div
+                className={`
+                  pointer-events-none absolute left-1/2 top-full z-40 w-[420px] -translate-x-1/2 pt-4
+                  opacity-0 transition-all duration-200 group-hover:opacity-100 group-hover:pointer-events-auto
+                `}
+              >
+                <div
+                  className={`
+                    rounded-2xl border shadow-2xl backdrop-blur-xl p-4
+                    ${darkMode ? 'bg-dim-grey-900/95 border-dim-grey-700' : 'bg-white/95 border-dim-grey-200'}
+                  `}
+                >
+                  <div className="mb-3 px-2">
+                    <p className={`text-xs font-semibold uppercase tracking-wide ${
+                      darkMode ? 'text-dim-grey-400' : 'text-dim-grey-500'
+                    }`}>
+                      Services
+                    </p>
+                    <p className={`text-sm ${
+                      darkMode ? 'text-dim-grey-300' : 'text-dim-grey-600'
+                    }`}>
+                      Choose the right growth engine for your brand.
+                    </p>
+                  </div>
+                  <div className="space-y-1">
+                    {servicesMenu.map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        className={`
+                          flex items-start gap-3 rounded-xl px-3 py-3 transition-colors
+                          ${darkMode ? 'hover:bg-dim-grey-800' : 'hover:bg-dim-grey-50'}
+                        `}
+                      >
+                        <span className="text-xl mt-0.5">{item.emoji}</span>
+                        <div>
+                          <div className={`text-sm font-semibold ${
+                            pathname === item.href
+                              ? darkMode
+                                ? 'text-onyx-300'
+                                : 'text-onyx-600'
+                              : darkMode
+                                ? 'text-white'
+                                : 'text-dim-grey-900'
+                          }`}>
+                            {item.label}
+                          </div>
+                          <p className={`text-xs mt-1 ${
+                            darkMode ? 'text-dim-grey-400' : 'text-dim-grey-600'
+                          }`}>
+                            {item.description}
+                          </p>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                  <div className="mt-3 border-t border-dim-grey-700/40 pt-3 flex items-center justify-between">
+                    <span className={`text-xs ${
+                      darkMode ? 'text-dim-grey-400' : 'text-dim-grey-500'
+                    }`}>
+                      Not sure where to start?
+                    </span>
+                    <Link
+                      href="/contact"
+                      className={`text-xs font-semibold ${
+                        darkMode ? 'text-onyx-300 hover:text-onyx-200' : 'text-onyx-600 hover:text-onyx-700'
+                      }`}
+                    >
+                      Talk to our team →
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Other top-level links */}
+            <Link
+              href="/pricing"
+              className={`text-sm transition-colors ${
+                pathname === '/pricing'
+                  ? darkMode
+                    ? 'text-onyx-300 font-semibold'
+                    : 'text-onyx-600 font-semibold'
+                  : darkMode
+                    ? 'text-dim-grey-300 hover:text-onyx-300'
+                    : 'text-dim-grey-700 hover:text-onyx-600'
+              }`}
+            >
+              Pricing
+            </Link>
+            <Link
+              href="/about"
+              className={`text-sm transition-colors ${
+                pathname === '/about'
+                  ? darkMode
+                    ? 'text-onyx-300 font-semibold'
+                    : 'text-onyx-600 font-semibold'
+                  : darkMode
+                    ? 'text-dim-grey-300 hover:text-onyx-300'
+                    : 'text-dim-grey-700 hover:text-onyx-600'
+              }`}
+            >
+              About
+            </Link>
             
             {/* Dark Mode Toggle */}
             <button
@@ -90,7 +233,7 @@ export default function Navigation() {
             
             <Link
               href="/contact"
-              className="bg-gradient-to-r from-brick-ember-500 to-brick-ember-600 text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105"
+              className="bg-gradient-to-r from-brick-ember-500 to-brick-ember-600 text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105 text-sm font-semibold"
             >
               Get Started
             </Link>
