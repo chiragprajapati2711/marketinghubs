@@ -1,5 +1,5 @@
 export default function robots() {
-  const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || 'https://marketinghubs.com/').replace(/\/$/, '');
+  const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || 'https://marktinghubs.com/').replace(/\/$/, '');
 
   return {
     rules: [

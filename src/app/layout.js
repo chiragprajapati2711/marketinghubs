@@ -18,7 +18,7 @@ export const metadata = {
   description:
     "Professional digital marketing services including SEO, PPC, Meta Ads, Social Media Marketing, and Ecommerce Marketing. Grow your business with data-driven strategies.",
   metadataBase: new URL(
-    (process.env.NEXT_PUBLIC_SITE_URL || "https://marketinghubs.com/").replace(/\/$/, "")
+    (process.env.NEXT_PUBLIC_SITE_URL || "https://marktinghubs.com/").replace(/\/$/, "")
   ),
   robots: {
     index: true,
