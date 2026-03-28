@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || 'https://marktinghubs.com/').replace(/\/$/, '');
+  const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || 'https://marketinghubs.com/').replace(/\/$/, '');
 
   const routes = [
     '',

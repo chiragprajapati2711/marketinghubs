@@ -52,19 +52,19 @@ export default function WebsiteDevelopmentPage() {
     {
       id: 'corporate',
       title: 'Corporate Website Development',
-      image: '/SEO-marketing-company.webp',
+      image: '/Cororate1.webp',
       content: 'Create a polished, professional presence for your business. We design and build corporate websites that reflect your brand, showcase your services, and convert visitors into leads. From clean layouts to clear calls-to-action, we focus on credibility, usability, and performance so your company makes a strong first impression.',
     },
     {
       id: 'wordpress',
       title: 'WordPress Development',
-      image: '/social-media-marketing-e14304079.webp',
+      image: '/Ecommerce2.webp',
       content: 'Leverage the flexibility of WordPress with custom themes, plugins, and integrations. We build fast, secure, and easy-to-manage WordPress sites—whether you need a blog, portfolio, or full business site. You get a powerful CMS without the complexity, plus training so you can update content yourself.',
     },
     {
       id: 'ecommerce',
       title: 'E-commerce Website Development',
-      image: '/eCommerce-Development-and-Digita.webp',
+      image: '/Ecommerce3.webp',
       content: 'Launch and grow your online store with a custom e-commerce solution. We build on platforms like Shopify and WooCommerce, or create bespoke solutions for complex needs. Product catalogs, secure checkout, inventory management, and mobile-first design—all tailored to your brand and sales goals.',
     },
   ];
