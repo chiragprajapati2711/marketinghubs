@@ -7,7 +7,7 @@ import Footer from '@/components/Footer';
 import FAQ from '@/components/FAQ';
 import { useTheme } from '@/contexts/ThemeContext';
 
-export default function HomePageClient() {
+export default function Home() {
   const { darkMode } = useTheme();
   const [hoveredService, setHoveredService] = useState(null);
   const [visibleElements, setVisibleElements] = useState(new Set());

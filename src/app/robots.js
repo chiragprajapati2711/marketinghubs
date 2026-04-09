@@ -1,7 +1,5 @@
-import { getSiteUrl } from '@/lib/site';
-
 export default function robots() {
-  const siteUrl = getSiteUrl();
+  const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || 'https://marktinghubs.com/').replace(/\/$/, '');
 
   return {
     rules: [
